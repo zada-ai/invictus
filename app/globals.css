@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #7877E6;
 }
 
 @theme inline {
@@ -23,4 +24,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+
+  /* Gradient using --primary as base */
+  .gradient-primary {
+    background: linear-gradient(to right,
+        color-mix(in srgb, var(--primary) 80%, #000) 0%,
+        /* darker shade */
+        var(--primary) 50%,
+        color-mix(in srgb, var(--primary) 80%, #fff) 100%
+        /* lighter shade */
+      );
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+
+  /* Hover state like Tailwind’s hover:from-blue-800 hover:to-blue-500 */
+  .gradient-primary:hover {
+    background: linear-gradient(to right,
+        color-mix(in srgb, var(--primary) 90%, #000) 0%,
+        color-mix(in srgb, var(--primary) 70%, #fff) 100%);
+  }
+
 }

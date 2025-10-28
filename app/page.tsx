@@ -1,65 +1,61 @@
-import Image from "next/image";
+import GradientBlinds from "@/components/GradientBlinds"
+import Navbar from "@/components/Navbar"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="relative min-h-screen overflow-hidden">
+      <Navbar />
+
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 w-full h-full flex items-center justify-center">
+        <GradientBlinds
+          gradientColors={["#5a59c2", "#7877E6", "#9c9bef", "#b8b7f5"]}
+          angle={15}
+          noise={0.25}
+          blindCount={13}
+          blindMinWidth={50}
+          spotlightRadius={0.38}
+          spotlightSoftness={1.6}
+          spotlightOpacity={0.42}
+          mouseDampening={0.15}
+          distortAmount={0}
+          shineDirection="left"
+          mixBlendMode="overlay"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </div>
+
+      <div className="relative z-10 flex min-h-screen flex-col">
+        {/* Hero Section */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="flex items-center justify-center min-h-screen w-full px-5 sm:px-20">
+            <div className="relative z-10 flex max-w-4xl flex-col items-center gap-8 text-center">
+              <div className="bg-[var(--primary)] px-2 py-2">
+                <h3 className="text-white text-lg font-semibold">AI-Powered CRM & Lead Management for Roofers</h3>
+              </div>
+              <h1 className="text-5xl font-bold uppercase leading-tight tracking-tight text-white md:text-7xl text-balance drop-shadow-2xl">
+                Never Miss a Roofing
+                <br />
+                Lead Again
+              </h1>
+              <p className="text-xl text-white/90 max-w-3xl text-pretty drop-shadow-lg">
+              2x your lead generation and never lose a customer again. Invictus RoofBot books appointments, sends reminders, and keeps everything organized inside our CRM.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                <button className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-black transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-2xl">
+                  Book a demo
+                </button>
+                <button className="inline-flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur transition-all hover:bg-white/20 hover:border-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-xl">
+                  Explore More
+                  <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </div>
+    </main>
+  )
 }
