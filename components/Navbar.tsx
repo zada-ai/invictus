@@ -71,13 +71,34 @@ export default function Navbar() {
           <a className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer" href="/">
             <span className="relative z-20">Home</span>
           </a>
-          <a className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer" href="/">
+          <a
+            href="#how-it-works"
+            onClick={(e) => {
+              e.preventDefault()
+              handleMobileNavClick("how-it-works")
+            }}
+            className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer"
+          >
             <span className="relative z-20">How it works?</span>
           </a>
-          <a className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer" href="/">
+          <a
+            href="#features"
+            onClick={(e) => {
+              e.preventDefault()
+              handleMobileNavClick("features")
+            }}
+            className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer"
+          >
             <span className="relative z-20">Features</span>
           </a>
-          <a className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer" href="/">
+          <a
+            href="#pricing"
+            onClick={(e) => {
+              e.preventDefault()
+              handleMobileNavClick("pricing")
+            }}
+            className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer"
+          >
             <span className="relative z-20">Pricing</span>
           </a>
         </div>
@@ -177,6 +198,26 @@ export default function Navbar() {
                 className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
               >
                 Registry
+              </a>
+              <a
+                href="#features"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleMobileNavClick("features")
+                }}
+                className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
+              >
+                Features
+              </a>
+              <a
+                href="#pricing"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleMobileNavClick("pricing")
+                }}
+                className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
+              >
+                Pricing
               </a>
               <div className="border-t border-white/20 pt-4 mt-4 flex flex-col space-y-3">
                 <button

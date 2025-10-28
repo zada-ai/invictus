@@ -2,7 +2,7 @@
 
 export default function Work() {
   return (
-    <div className="text-white text-center py-20 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
+    <div id="how-it-works" className="text-white text-center py-20 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">How IT WORKS</h2>
 

@@ -1,8 +1,8 @@
 "use client";
 
-export default function Features() {
+export default function Pricing() {
   return (
-    <section className="py-24 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-[#080808] to-[#101020] text-white text-center">
+    <section id="pricing" className="py-24 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-[#080808] to-[#101020] text-white text-center">
       {/* Heading */}
       <h2 className="text-3xl md:text-5xl font-extrabold mb-5 tracking-tight">
         Choose the <span className="text-blue-400">Plan</span> that fits your team best
