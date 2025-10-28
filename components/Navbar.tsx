@@ -129,22 +129,14 @@ export default function Navbar() {
           width: "calc(100% - 2rem)",
         }}
       >
-        <a className="flex items-center justify-center gap-2" href="/">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white"
-          >
-            <path d="M20 30L35 60L50 30L35 45L20 30Z" fill="currentColor" />
-            <rect x="55" y="30" width="8" height="30" fill="currentColor" />
-            <rect x="68" y="30" width="8" height="30" fill="currentColor" />
-            <path d="M80 30H95C97.2 30 99 31.8 99 34V56C99 58.2 97.2 60 95 60H80V30Z" fill="currentColor" />
-            <path d="M80 45L95 30H80V45Z" fill="white" />
-          </svg>
-          <span className="text-white font-semibold">v0</span>
+        <a
+          className={`flex items-center justify-center gap-2 transition-all duration-300 ${
+            isScrolled ? "ml-4" : ""
+          }`}
+          href="/"
+          rel="noopener noreferrer"
+        >
+          <Image src={LogoLight} className="text-foreground w-27 rounded" alt="Invictus" />
         </a>
 
         <button
@@ -177,27 +169,24 @@ export default function Navbar() {
             <nav className="flex flex-col space-y-4">
               <a
                 href="/"
+                onClick={(e) => {
+                  e.preventDefault()
+                  setIsMobileMenuOpen(false)
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }}
                 className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
               >
-                Create Token
+                Home
               </a>
               <a
-                href="/"
+                href="#how-it-works"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleMobileNavClick("how-it-works")
+                }}
                 className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
               >
-                Create Pool
-              </a>
-              <a
-                href="/"
-                className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
-              >
-                Swap
-              </a>
-              <a
-                href="/"
-                className="text-left px-4 py-3 text-lg font-medium text-white/80 hover:text-white transition-colors rounded-lg hover:bg-white/10"
-              >
-                Registry
+                How it works?
               </a>
               <a
                 href="#features"
@@ -228,7 +217,7 @@ export default function Navbar() {
                       : "bg-gradient-to-r from-blue-900 to-blue-600 border-blue-400/30 text-white"
                   }`}
                 >
-                  {isWalletConnected ? "0x1234...5678" : "Connect Wallet"}
+                  {isWalletConnected ? "0x1234...5678" : "Book a demo"}
                 </button>
               </div>
             </nav>
