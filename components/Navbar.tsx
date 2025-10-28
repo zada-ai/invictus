@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import LogoLight from "@/public/Invictus_TBG_P.png"
 
+
+
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -190,7 +193,11 @@ export default function Navbar() {
             </nav>
           </div>
         </div>
+        
       )}
+
+
+
     </>
   )
 }

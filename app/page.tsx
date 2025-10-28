@@ -1,8 +1,13 @@
 import GradientBlinds from "@/components/GradientBlinds"
 import Navbar from "@/components/Navbar"
+import Work from "@/components/Work";
+import Features from "@/components/Features";
+import Pricing from "@/components/Pricing";
+import Footer  from "@/components/Footer";
 
 export default function Home() {
   return (
+    <>
     <main className="relative min-h-screen overflow-hidden">
       <Navbar />
 
@@ -56,6 +61,21 @@ export default function Home() {
           </div>
         </div>
       </div>
+          <section className="relative z-10">
+          <Work />
+        </section>
+        <section className="relative z-10">
+          <Features />
+        </section>
+        <section className="relative z-10">
+          <Pricing />
+        </section>
+        <section className="relative z-10">
+          <Footer />
+        </section>
     </main>
+    
+    
+    </>
   )
 }
