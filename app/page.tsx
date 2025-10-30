@@ -1,3 +1,4 @@
+"use client"
 import GradientBlinds from "@/components/GradientBlinds"
 import Navbar from "@/components/Navbar"
 import Work from "@/components/Work";
@@ -6,6 +7,11 @@ import Pricing from "@/components/Pricing";
 import Footer  from "@/components/Footer";
 
 export default function Home() {
+
+  const handleBookingClick = () => {
+    window.location.href = 'https://roofbot-crm-frontend-ege1.vercel.app/'
+  }
+
   return (
     <>
     <main className="relative min-h-screen overflow-hidden">
@@ -35,7 +41,7 @@ export default function Home() {
           <div className="flex items-center justify-center min-h-screen w-full px-5 sm:px-20">
             <div className="relative z-10 flex max-w-4xl flex-col items-center gap-8 text-center">
               <div className="bg-[var(--primary)] px-2 py-2">
-                <h3 className="text-white text-lg font-semibold">AI-Powered CRM & Lead Management for Roofers</h3>
+                <h3 className="text-white text-xl font-semibold">AI-Powered CRM & Lead Management for Roofers</h3>
               </div>
               <h1 className="text-5xl font-bold uppercase leading-tight tracking-tight text-white md:text-7xl text-balance drop-shadow-2xl">
                 Never Miss a Roofing
@@ -47,7 +53,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <button className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-black transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-2xl">
+                <button onClick={handleBookingClick} className="inline-flex cursor-pointer items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-black transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-2xl">
                   Book a demo
                 </button>
                 <button className="inline-flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur transition-all hover:bg-white/20 hover:border-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-xl">

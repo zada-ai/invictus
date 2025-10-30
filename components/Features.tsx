@@ -27,7 +27,7 @@ export default function Features() {
       id="features"
       className="py-20 px-6 bg-gradient-to-b from-[#0a0a0a] to-[#111] text-white text-center"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <h2 className="text-3xl md:text-4xl uppercase font-bold mb-4">
         RoofBot is perfect for you if…
       </h2>
 

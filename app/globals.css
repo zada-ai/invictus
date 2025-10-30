@@ -7,6 +7,20 @@
 }
 
 @theme inline {
+    /* Lighter shades mix with white */
+    --color-blue-50:  color-mix(in srgb, var(--primary) 10%, white);
+    --color-blue-100: color-mix(in srgb, var(--primary) 20%, white);
+    --color-blue-200: color-mix(in srgb, var(--primary) 30%, white);
+    --color-blue-300: color-mix(in srgb, var(--primary) 45%, white);
+    --color-blue-400: color-mix(in srgb, var(--primary) 60%, white);
+  
+    /* Core and darker shades mix with black */
+    --color-blue-500: var(--primary);
+    --color-blue-600: color-mix(in srgb, var(--primary) 85%, black);
+    --color-blue-700: color-mix(in srgb, var(--primary) 70%, black);
+    --color-blue-800: color-mix(in srgb, var(--primary) 55%, black);
+    --color-blue-900: color-mix(in srgb, var(--primary) 40%, black);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

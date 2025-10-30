@@ -4,7 +4,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-24 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-[#080808] to-[#101020] text-white text-center">
       {/* Heading */}
-      <h2 className="text-3xl md:text-5xl font-extrabold mb-5 tracking-tight">
+      <h2 className="text-3xl md:text-5xl uppercase font-extrabold mb-5 tracking-tight">
         Choose the <span className="text-blue-400">Plan</span> that fits your team best
       </h2>
 
@@ -17,7 +17,7 @@ export default function Pricing() {
       {/* Pricing Cards */}
       <div className="flex flex-col lg:flex-row justify-center items-stretch gap-10">
         {/* Starter Plan */}
-        <div className="group relative flex-1 max-w-lg bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-blue-500/30">
+        <div className="group relative flex-1 max-w-lg backdrop-blur-lg border border-white/10 rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-blue-500/30">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
           <div className="p-10 relative z-10 text-left">
@@ -42,7 +42,7 @@ export default function Pricing() {
             </ul>
 
             <div className="mt-8 text-center">
-              <button className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition font-semibold text-white shadow-lg">
+              <button className="gradient-primary font-medium relative cursor-pointer hover:-translate-y-0.5 transition-all duration-200 inline-block text-center px-4 py-2 text-sm rounded-full border-2 border-white/30">
                 Get Starter Plan
               </button>
             </div>
@@ -82,15 +82,23 @@ export default function Pricing() {
           <div className="p-10 relative z-10 text-left">
             <h3 className="text-2xl font-bold text-blue-400 mb-3 text-center">Pro Plan</h3>
             <p className="text-xl font-semibold text-center text-white mb-8">$3,942 / Year</p>
-
-            <ul className="text-white/80 space-y-2 mb-8">
+            <h4 className="text-blue-400 font-semibold mb-2">AI Integration</h4>
+            <ul className="text-white/80 space-y-2 mb-5">
               <li>• Everything in Starter</li>
+            </ul>
+
+            <h4 className="text-blue-400 font-semibold mb-2">Lead Management CRM</h4>
+            <ul className="text-white/80 space-y-2 mb-5">
+              <li>• Everthing in Starter</li>
+            </ul>
+            <h4 className="text-blue-400 font-semibold mb-2">Plus+</h4>
+            <ul className="text-white/80 space-y-2 mb-8">
               <li>• No setup fee</li>
               <li>• Priority onboarding + support</li>
             </ul>
 
             <div className="text-center">
-              <button className="px-8 py-3 rounded-full bg-blue-500 hover:bg-blue-600 transition font-semibold text-white shadow-lg">
+              <button className="gradient-primary font-medium relative cursor-pointer hover:-translate-y-0.5 transition-all duration-200 inline-block text-center px-4 py-2 text-sm rounded-full border-2 border-white/30">
                 Get Pro Plan
               </button>
             </div>

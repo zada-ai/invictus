@@ -29,13 +29,13 @@ export default function Footer() {
         {/* Links */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href="#"
+            href="/privacy"
             className="text-sm hover:text-blue-400 transition-colors"
           >
             Privacy Policy
           </a>
           <a
-            href="#"
+            href="/Term"
             className="text-sm hover:text-blue-400 transition-colors"
           >
             Terms & Conditions

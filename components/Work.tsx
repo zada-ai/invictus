@@ -4,7 +4,7 @@ export default function Work() {
   return (
     <div id="how-it-works" className="text-white text-center py-20 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">How IT WORKS</h2>
+      <h2 className="text-3xl md:text-4xl uppercase font-bold mb-4 text-white">How IT WORKS</h2>
 
       {/* Blue gradient lines */}
       <div className="flex flex-col items-center space-y-2 mb-8">
@@ -15,7 +15,7 @@ export default function Work() {
       {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 py-10 max-w-7xl mx-auto">
         {/* Card 1 */}
-        <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 hover:border-blue-500 transition-all duration-300">
+        <div className=" p-6 backdrop-blur-lg border border-white/10 rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-blue-500/30">
           <div className="w-full h-56 overflow-hidden rounded-xl mb-4">
             <img
               src="Capture & Organize Leads.jpg"
@@ -31,7 +31,7 @@ export default function Work() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 hover:border-blue-500 transition-all duration-300">
+        <div className=" p-6 backdrop-blur-lg border border-white/10 rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-blue-500/30">
           <div className="w-full h-56 overflow-hidden rounded-xl mb-4">
             <img
               src="Book & Remind Automations.jpg"
@@ -47,7 +47,7 @@ export default function Work() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 hover:border-blue-500 transition-all duration-300">
+        <div className=" p-6 backdrop-blur-lg border border-white/10 rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-blue-500/30">
           <div className="w-full h-56 overflow-hidden rounded-xl mb-4">
             <img
               src="Track & Close in CRM.jpg"

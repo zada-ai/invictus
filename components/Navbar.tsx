@@ -21,14 +21,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleMobileNavClick = (sectionId: string) => {
+  const handleNavigation = (sectionId: string) => {
+    // Check if we're on the home page
+    const isHomePage = window.location.pathname === '/';
     setIsMobileMenuOpen(false)
+    
+    if (!isHomePage) {
+      // If not on home page, navigate to home page with section hash
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
+    // If on home page, scroll to section
     const element = document.getElementById(sectionId)
     if (element) {
       const headerOffset = 120
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
       const offsetPosition = elementPosition - headerOffset
-
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
@@ -37,7 +46,7 @@ export default function Navbar() {
   }
 
   const handleWalletConnect = () => {
-    setIsWalletConnected(!isWalletConnected)
+    window.location.href = 'https://roofbot-crm-frontend-ege1.vercel.app/'
   }
 
   return (
@@ -49,12 +58,11 @@ export default function Navbar() {
         } py-2`}
         style={{
           willChange: "transform",
-          transform: "translateZ(0)",
+          transform: "translateZ(0) translateX(-50%)",
           backfaceVisibility: "hidden",
           perspective: "1000px",
           background: isScrolled ? "rgba(15, 15, 15, 0.8)" : "transparent",
           left: "50%",
-          transform: "translateX(-50%)",
         }}
       >
         <a
@@ -75,7 +83,7 @@ export default function Navbar() {
             href="#how-it-works"
             onClick={(e) => {
               e.preventDefault()
-              handleMobileNavClick("how-it-works")
+              handleNavigation("how-it-works")
             }}
             className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer"
           >
@@ -85,7 +93,7 @@ export default function Navbar() {
             href="#features"
             onClick={(e) => {
               e.preventDefault()
-              handleMobileNavClick("features")
+              handleNavigation("features")
             }}
             className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer"
           >
@@ -95,7 +103,7 @@ export default function Navbar() {
             href="#pricing"
             onClick={(e) => {
               e.preventDefault()
-              handleMobileNavClick("pricing")
+              handleNavigation("pricing")
             }}
             className="relative px-4 py-2 text-white/70 hover:text-white transition-colors cursor-pointer"
           >
